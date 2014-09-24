@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="localhost" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ny.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CAC-hi-ftD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_with_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="1r3-9g-eeT">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmf-bO-MBK" customClass="FBLoginView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ISx-eA-Pae">
+                                        <variation key="heightClass=regular" constant="240"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="100" id="WSu-V6-vu4">
+                                        <variation key="heightClass=regular" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ISx-eA-Pae"/>
+                                        <exclude reference="WSu-V6-vu4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="ISx-eA-Pae"/>
+                                        <include reference="WSu-V6-vu4"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="CAC-hi-ftD" secondAttribute="trailing" id="3tE-T4-gIa"/>
+                            <constraint firstItem="CAC-hi-ftD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="783-Nl-yOR"/>
+                            <constraint firstItem="1r3-9g-eeT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="7AR-Uw-R1U"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wmf-bO-MBK" secondAttribute="bottom" constant="128" id="Rwr-Eu-Pkm"/>
+                            <constraint firstItem="1r3-9g-eeT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="dcu-z1-rMJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CAC-hi-ftD" secondAttribute="bottom" id="gpn-fW-RTc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1r3-9g-eeT" secondAttribute="trailing" constant="32" id="mST-Qo-XWZ"/>
+                            <constraint firstAttribute="centerX" secondItem="Wmf-bO-MBK" secondAttribute="centerX" id="oMI-0W-xiK"/>
+                            <constraint firstItem="CAC-hi-ftD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="thd-HZ-dvc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3tE-T4-gIa"/>
+                                <exclude reference="783-Nl-yOR"/>
+                                <exclude reference="thd-HZ-dvc"/>
+                                <exclude reference="7AR-Uw-R1U"/>
+                                <exclude reference="dcu-z1-rMJ"/>
+                                <exclude reference="mST-Qo-XWZ"/>
+                                <exclude reference="oMI-0W-xiK"/>
+                                <exclude reference="Rwr-Eu-Pkm"/>
+                                <exclude reference="gpn-fW-RTc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="1r3-9g-eeT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3tE-T4-gIa"/>
+                                <include reference="783-Nl-yOR"/>
+                                <include reference="thd-HZ-dvc"/>
+                                <include reference="7AR-Uw-R1U"/>
+                                <include reference="dcu-z1-rMJ"/>
+                                <include reference="mST-Qo-XWZ"/>
+                                <include reference="oMI-0W-xiK"/>
+                                <include reference="Rwr-Eu-Pkm"/>
+                                <include reference="gpn-fW-RTc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="fbLoginView" destination="Wmf-bO-MBK" id="TLS-Rm-bRf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425" y="463"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_with_text.png" width="300" height="56"/>
+        <image name="ny.jpg" width="1646" height="1102"/>
+    </resources>
+</document>
